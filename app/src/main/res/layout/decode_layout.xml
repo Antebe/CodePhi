@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+
+tools:context=".Decode">
+    <ScrollView
+        android:id="@+id/se"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+<EditText
+    android:id="@+id/enterD"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    </ScrollView>
+
+<TextView
+    android:id="@+id/pathD"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/se"
+    android:text="" />
+
+    <Button
+    android:id="@+id/write"
+    android:layout_below="@+id/pathD"
+        android:background="@drawable/button_circle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Write" />
+
+<Button
+    android:layout_below="@+id/write"
+    android:id="@+id/goD"
+    android:background="@drawable/button_circle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Go" />
+
+
+
+
+<ScrollView
+    android:layout_below="@+id/goD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textIsSelectable="true"
+        android:id="@+id/resultD"
+        android:layout_below="@+id/goD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</ScrollView>
+
+    <Button
+        android:text="paste"
+        android:background="@drawable/button_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/write"
+        android:layout_toEndOf="@+id/write"
+        android:id="@+id/paste" />
+
+    <ImageButton
+        android:background="@drawable/button_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:id="@+id/imageButton"
+        android:layout_alignTop="@+id/paste"
+        android:layout_toEndOf="@+id/paste"
+        android:layout_above="@+id/goD" />
+
+
+</RelativeLayout>
+

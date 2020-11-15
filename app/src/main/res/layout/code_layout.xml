@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Code">
+    <ScrollView
+        android:id="@+id/sed"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+    <EditText
+        android:id="@+id/enter"
+        android:hint="Max length is 80 characters"
+        android:maxLength="80"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </ScrollView>
+    <TextView
+        android:id="@+id/path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sed"
+        android:text="" />
+
+    <Button
+        android:id="@+id/write"
+        android:layout_below="@+id/path"
+        android:background="@drawable/button_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Write" />
+
+    <Button
+        android:layout_below="@+id/write"
+        android:id="@+id/go"
+        android:background="@drawable/button_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go" />
+
+
+
+
+    <ScrollView
+        android:layout_below="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2">
+
+        <TextView
+            android:textIsSelectable="true"
+            android:id="@+id/result"
+            android:layout_below="@+id/go"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        
+
+    </ScrollView>
+
+    <Button
+        android:text="Paste"
+        android:background="@drawable/button_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/write"
+        android:layout_toEndOf="@+id/write"
+        android:id="@+id/paste" />
+
+    <ImageButton
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_btn_speak_now"
+        android:id="@+id/recorder"
+        android:layout_above="@+id/go"
+        android:layout_toEndOf="@+id/paste"
+        android:background="@drawable/button_circle" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:srcCompat="@android:drawable/menuitem_background"
+        android:layout_below="@+id/scrollView2"
+        android:id="@+id/imageView"
+        android:layout_toStartOf="@+id/imagebtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:background="@drawable/button_circle"
+        android:text="QR CODE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagebtn"
+        android:layout_above="@+id/go"
+        android:layout_toEndOf="@+id/recorder" />
+
+
+
+
+</RelativeLayout>
